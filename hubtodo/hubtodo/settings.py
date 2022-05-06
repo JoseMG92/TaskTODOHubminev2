@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'Tareasapp.apps.TareasappConfig'
+    'Tareasapp.apps.TareasappConfig',
+    'authentication',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -57,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'hubtodo.urls'
 
-AUTH_USER_MODEL = 'tareasapp.Usuarios'
+AUTH_USER_MODEL = 'authentication.Usuarios'
 
 TEMPLATES = [
     {

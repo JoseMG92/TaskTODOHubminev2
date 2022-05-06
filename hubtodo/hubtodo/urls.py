@@ -21,6 +21,7 @@ from django.urls import include, re_path
 
 
 urlpatterns = [
+    path('api/auth/', include('authentication.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('Tareasapp.urls'))
+    path('api/tasks/', include('Tareasapp.urls'))
 ]
