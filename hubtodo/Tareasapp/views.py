@@ -6,7 +6,6 @@ from rest_framework.parsers import JSONParser
 from django.contrib.auth.hashers import make_password
 from django.http.response import JsonResponse
 from django.utils.decorators import method_decorator
-
 from Tareasapp.models import Tareas, Usuarios
 from Tareasapp.serializers import TareasSerializer
 # Create your views here.
