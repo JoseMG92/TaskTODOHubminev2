@@ -1,13 +1,21 @@
 from pyclbr import Class
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
-class Usuarios(models.Model):
+"""class Usuarios(models.Model):
     name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)"""
+
+class Usuarios(AbstractUser):
+    email = models.CharField(max_length=50, unique=True)
     password = models.CharField(max_length=100)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELD = ['password']
 
     def __str__(self):
         return f"{self.name} {self.last_name}"
